@@ -1,0 +1,951 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28038FB11B680A5B00782290 /* SMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 28038FB01B680A5B00782290 /* SMedia.m */; };
+		28038FB61B68141300782290 /* VideoPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28038FB41B68141300782290 /* VideoPresentationViewController.m */; };
+		28038FB71B68141300782290 /* VideoPresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28038FB51B68141300782290 /* VideoPresentationViewController.xib */; };
+		28038FBB1B68142800782290 /* MemoPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28038FB91B68142800782290 /* MemoPresentationViewController.m */; };
+		28038FBC1B68142800782290 /* MemoPresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28038FBA1B68142800782290 /* MemoPresentationViewController.xib */; };
+		28038FC01B68143E00782290 /* MessagePresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28038FBE1B68143E00782290 /* MessagePresentationViewController.m */; };
+		28038FC11B68143E00782290 /* MessagePresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28038FBF1B68143E00782290 /* MessagePresentationViewController.xib */; };
+		280427C71B00950A008ED938 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 280427C61B00950A008ED938 /* main.m */; };
+		280427CA1B00950A008ED938 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 280427C91B00950A008ED938 /* AppDelegate.m */; };
+		280427CD1B00950A008ED938 /* SpotSome.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 280427CB1B00950A008ED938 /* SpotSome.xcdatamodeld */; };
+		280427D31B00950A008ED938 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280427D11B00950A008ED938 /* Main.storyboard */; };
+		280427D51B00950A008ED938 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280427D41B00950A008ED938 /* Images.xcassets */; };
+		280427D81B00950A008ED938 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280427D61B00950A008ED938 /* LaunchScreen.xib */; };
+		280427E41B00950A008ED938 /* SpotSomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280427E31B00950A008ED938 /* SpotSomeTests.m */; };
+		284746571B4B472D00300F58 /* YelpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284746561B4B472D00300F58 /* YelpTableViewController.m */; };
+		284945F31B3C2158006DF5F4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284945EF1B3C2158006DF5F4 /* Fabric.framework */; };
+		284945F41B3C2158006DF5F4 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284945F01B3C2158006DF5F4 /* TwitterKit.framework */; };
+		284945F51B3C2158006DF5F4 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 284945F11B3C2158006DF5F4 /* TwitterKitResources.bundle */; };
+		284945F61B3C2158006DF5F4 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284945F21B3C2158006DF5F4 /* TwitterCore.framework */; };
+		284EA14B1B4D17410017D417 /* SLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EA14A1B4D17410017D417 /* SLocation.m */; };
+		284EA14E1B4D17420017D417 /* SSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EA14D1B4D17420017D417 /* SSpot.m */; };
+		284EA1511B4D1FF90017D417 /* HybridSpot.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EA1501B4D1FF90017D417 /* HybridSpot.m */; };
+		284EA1551B4D2B3D0017D417 /* SpotsomeSpotMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EA1531B4D2B3D0017D417 /* SpotsomeSpotMainViewController.m */; };
+		284EA15B1B4D2F870017D417 /* YelpAddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EA1591B4D2F870017D417 /* YelpAddressTableViewCell.m */; };
+		284EA15C1B4D2F870017D417 /* YelpAddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284EA15A1B4D2F870017D417 /* YelpAddressTableViewCell.xib */; };
+		284EA1601B4D32EB0017D417 /* YelpIdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EA15E1B4D32EB0017D417 /* YelpIdTableViewCell.m */; };
+		284EA1611B4D32EB0017D417 /* YelpIdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284EA15F1B4D32EB0017D417 /* YelpIdTableViewCell.xib */; };
+		284EA1651B4D33480017D417 /* PushTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284EA1631B4D33480017D417 /* PushTableViewCell.m */; };
+		284EA1661B4D33480017D417 /* PushTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284EA1641B4D33480017D417 /* PushTableViewCell.xib */; };
+		284F79741B68ED7C0083FE75 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F79721B68ED7C0083FE75 /* MessagesViewController.m */; };
+		284F79751B68ED7C0083FE75 /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284F79731B68ED7C0083FE75 /* MessagesViewController.xib */; };
+		284F79791B6917310083FE75 /* ChatItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F79771B6917310083FE75 /* ChatItemTableViewCell.m */; };
+		284F797A1B6917310083FE75 /* ChatItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284F79781B6917310083FE75 /* ChatItemTableViewCell.xib */; };
+		284F797E1B6919600083FE75 /* AddNewChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284F797C1B6919600083FE75 /* AddNewChatViewController.m */; };
+		284F797F1B6919600083FE75 /* AddNewChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284F797D1B6919600083FE75 /* AddNewChatViewController.xib */; };
+		28524C6C1B640E570093BE9E /* BoardItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28524C6A1B640E570093BE9E /* BoardItemTableViewCell.m */; };
+		28524C6D1B640E570093BE9E /* BoardItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28524C6B1B640E570093BE9E /* BoardItemTableViewCell.xib */; };
+		2852A5D91B66DF670098459B /* SBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852A5D81B66DF670098459B /* SBoard.m */; };
+		2852A5DC1B66DF710098459B /* SChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852A5DB1B66DF710098459B /* SChat.m */; };
+		2852A5E01B66E9370098459B /* UploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852A5DE1B66E9370098459B /* UploadViewController.m */; };
+		2852A5E11B66E9370098459B /* UploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2852A5DF1B66E9370098459B /* UploadViewController.xib */; };
+		2852A5E61B66EF950098459B /* VideoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852A5E41B66EF950098459B /* VideoUploadViewController.m */; };
+		2852A5E71B66EF950098459B /* VideoUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2852A5E51B66EF950098459B /* VideoUploadViewController.xib */; };
+		2852A5EB1B66EFA60098459B /* MemoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852A5E91B66EFA60098459B /* MemoUploadViewController.m */; };
+		2852A5EC1B66EFA60098459B /* MemoUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2852A5EA1B66EFA60098459B /* MemoUploadViewController.xib */; };
+		2852A5F51B66EFC00098459B /* MessageUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2852A5F31B66EFC00098459B /* MessageUploadViewController.m */; };
+		2852A5F61B66EFC00098459B /* MessageUploadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2852A5F41B66EFC00098459B /* MessageUploadViewController.xib */; };
+		28557C0F1B4DBC5A0046E1C1 /* BoardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28557C0E1B4DBC5A0046E1C1 /* BoardTableViewController.m */; };
+		28557C121B4DBC6F0046E1C1 /* ChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28557C111B4DBC6F0046E1C1 /* ChatTableViewController.m */; };
+		285606AF1B67773B00BDF523 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285606AE1B67773B00BDF523 /* CoreMedia.framework */; };
+		285606B11B67774400BDF523 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285606B01B67774400BDF523 /* MediaPlayer.framework */; };
+		285606B31B6779E200BDF523 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285606B21B6779E200BDF523 /* MobileCoreServices.framework */; };
+		286E8AAE1B4C070D008C0E01 /* AppConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 286E8AAD1B4C070D008C0E01 /* AppConstants.m */; };
+		287B74071B630875000B9F00 /* YelpAddSpotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287B74051B630875000B9F00 /* YelpAddSpotViewController.m */; };
+		287B74081B630875000B9F00 /* YelpAddSpotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287B74061B630875000B9F00 /* YelpAddSpotViewController.xib */; };
+		288379901B3826C20064C6B0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2883798F1B3826C20064C6B0 /* LoginViewController.m */; };
+		288379941B3829E30064C6B0 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 288379921B3829E30064C6B0 /* MainViewController.m */; };
+		288379951B3829E30064C6B0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 288379931B3829E30064C6B0 /* MainViewController.xib */; };
+		288379971B382EE50064C6B0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288379961B382EE50064C6B0 /* MapKit.framework */; };
+		288379991B382EED0064C6B0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288379981B382EED0064C6B0 /* CoreLocation.framework */; };
+		28860B441B433934009B7F88 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 28860B431B433934009B7F88 /* Podfile */; };
+		28860B4E1B433AE4009B7F88 /* YLBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 28860B471B433AE4009B7F88 /* YLBusiness.m */; };
+		28860B4F1B433AE4009B7F88 /* YLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28860B491B433AE4009B7F88 /* YLClient.m */; };
+		28860B501B433AE4009B7F88 /* YLLocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 28860B4B1B433AE4009B7F88 /* YLLocalSearch.m */; };
+		28860B511B433AE4009B7F88 /* YLLocalSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 28860B4D1B433AE4009B7F88 /* YLLocalSearchResponse.m */; };
+		28860B531B433B0E009B7F88 /* YelpKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28860B521B433B0E009B7F88 /* YelpKeys.plist */; };
+		28B9128C1B697AD800621D5A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B9128B1B697AD800621D5A /* Social.framework */; };
+		6B7AA958812685AC9083AD45 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF21F9CF9FD5F30DEDFFD9F /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		280427DE1B00950A008ED938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 280427B91B00950A008ED938 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280427C01B00950A008ED938;
+			remoteInfo = SpotSome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		002E6A78BD2B2170D369EA26 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		28038FAF1B680A5B00782290 /* SMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMedia.h; sourceTree = "<group>"; };
+		28038FB01B680A5B00782290 /* SMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMedia.m; sourceTree = "<group>"; };
+		28038FB31B68141300782290 /* VideoPresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPresentationViewController.h; sourceTree = "<group>"; };
+		28038FB41B68141300782290 /* VideoPresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPresentationViewController.m; sourceTree = "<group>"; };
+		28038FB51B68141300782290 /* VideoPresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoPresentationViewController.xib; sourceTree = "<group>"; };
+		28038FB81B68142800782290 /* MemoPresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoPresentationViewController.h; sourceTree = "<group>"; };
+		28038FB91B68142800782290 /* MemoPresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoPresentationViewController.m; sourceTree = "<group>"; };
+		28038FBA1B68142800782290 /* MemoPresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoPresentationViewController.xib; sourceTree = "<group>"; };
+		28038FBD1B68143E00782290 /* MessagePresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePresentationViewController.h; sourceTree = "<group>"; };
+		28038FBE1B68143E00782290 /* MessagePresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagePresentationViewController.m; sourceTree = "<group>"; };
+		28038FBF1B68143E00782290 /* MessagePresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagePresentationViewController.xib; sourceTree = "<group>"; };
+		280427C11B00950A008ED938 /* SpotSome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotSome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		280427C51B00950A008ED938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280427C61B00950A008ED938 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		280427C81B00950A008ED938 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		280427C91B00950A008ED938 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		280427CC1B00950A008ED938 /* SpotSome.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpotSome.xcdatamodel; sourceTree = "<group>"; };
+		280427D21B00950A008ED938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		280427D41B00950A008ED938 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		280427D71B00950A008ED938 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		280427DD1B00950A008ED938 /* SpotSomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotSomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		280427E21B00950A008ED938 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280427E31B00950A008ED938 /* SpotSomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotSomeTests.m; sourceTree = "<group>"; };
+		284746551B4B472D00300F58 /* YelpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpTableViewController.h; sourceTree = "<group>"; };
+		284746561B4B472D00300F58 /* YelpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpTableViewController.m; sourceTree = "<group>"; };
+		284945EF1B3C2158006DF5F4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		284945F01B3C2158006DF5F4 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		284945F11B3C2158006DF5F4 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		284945F21B3C2158006DF5F4 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		284EA1491B4D17410017D417 /* SLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLocation.h; sourceTree = "<group>"; };
+		284EA14A1B4D17410017D417 /* SLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLocation.m; sourceTree = "<group>"; };
+		284EA14C1B4D17420017D417 /* SSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSpot.h; sourceTree = "<group>"; };
+		284EA14D1B4D17420017D417 /* SSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSpot.m; sourceTree = "<group>"; };
+		284EA14F1B4D1FF90017D417 /* HybridSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HybridSpot.h; sourceTree = "<group>"; };
+		284EA1501B4D1FF90017D417 /* HybridSpot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HybridSpot.m; sourceTree = "<group>"; };
+		284EA1521B4D2B3D0017D417 /* SpotsomeSpotMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotsomeSpotMainViewController.h; sourceTree = "<group>"; };
+		284EA1531B4D2B3D0017D417 /* SpotsomeSpotMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotsomeSpotMainViewController.m; sourceTree = "<group>"; };
+		284EA1581B4D2F870017D417 /* YelpAddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAddressTableViewCell.h; sourceTree = "<group>"; };
+		284EA1591B4D2F870017D417 /* YelpAddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAddressTableViewCell.m; sourceTree = "<group>"; };
+		284EA15A1B4D2F870017D417 /* YelpAddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YelpAddressTableViewCell.xib; sourceTree = "<group>"; };
+		284EA15D1B4D32EB0017D417 /* YelpIdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpIdTableViewCell.h; sourceTree = "<group>"; };
+		284EA15E1B4D32EB0017D417 /* YelpIdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpIdTableViewCell.m; sourceTree = "<group>"; };
+		284EA15F1B4D32EB0017D417 /* YelpIdTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YelpIdTableViewCell.xib; sourceTree = "<group>"; };
+		284EA1621B4D33480017D417 /* PushTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTableViewCell.h; sourceTree = "<group>"; };
+		284EA1631B4D33480017D417 /* PushTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTableViewCell.m; sourceTree = "<group>"; };
+		284EA1641B4D33480017D417 /* PushTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushTableViewCell.xib; sourceTree = "<group>"; };
+		284F79711B68ED7C0083FE75 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		284F79721B68ED7C0083FE75 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		284F79731B68ED7C0083FE75 /* MessagesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessagesViewController.xib; sourceTree = "<group>"; };
+		284F79761B6917310083FE75 /* ChatItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatItemTableViewCell.h; sourceTree = "<group>"; };
+		284F79771B6917310083FE75 /* ChatItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatItemTableViewCell.m; sourceTree = "<group>"; };
+		284F79781B6917310083FE75 /* ChatItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatItemTableViewCell.xib; sourceTree = "<group>"; };
+		284F797B1B6919600083FE75 /* AddNewChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewChatViewController.h; sourceTree = "<group>"; };
+		284F797C1B6919600083FE75 /* AddNewChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewChatViewController.m; sourceTree = "<group>"; };
+		284F797D1B6919600083FE75 /* AddNewChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewChatViewController.xib; sourceTree = "<group>"; };
+		28524C691B640E570093BE9E /* BoardItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardItemTableViewCell.h; sourceTree = "<group>"; };
+		28524C6A1B640E570093BE9E /* BoardItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardItemTableViewCell.m; sourceTree = "<group>"; };
+		28524C6B1B640E570093BE9E /* BoardItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardItemTableViewCell.xib; sourceTree = "<group>"; };
+		2852A5D71B66DF670098459B /* SBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBoard.h; sourceTree = "<group>"; };
+		2852A5D81B66DF670098459B /* SBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBoard.m; sourceTree = "<group>"; };
+		2852A5DA1B66DF710098459B /* SChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SChat.h; sourceTree = "<group>"; };
+		2852A5DB1B66DF710098459B /* SChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SChat.m; sourceTree = "<group>"; };
+		2852A5DD1B66E9370098459B /* UploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadViewController.h; sourceTree = "<group>"; };
+		2852A5DE1B66E9370098459B /* UploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadViewController.m; sourceTree = "<group>"; };
+		2852A5DF1B66E9370098459B /* UploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadViewController.xib; sourceTree = "<group>"; };
+		2852A5E31B66EF950098459B /* VideoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUploadViewController.h; sourceTree = "<group>"; };
+		2852A5E41B66EF950098459B /* VideoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUploadViewController.m; sourceTree = "<group>"; };
+		2852A5E51B66EF950098459B /* VideoUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoUploadViewController.xib; sourceTree = "<group>"; };
+		2852A5E81B66EFA60098459B /* MemoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoUploadViewController.h; sourceTree = "<group>"; };
+		2852A5E91B66EFA60098459B /* MemoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoUploadViewController.m; sourceTree = "<group>"; };
+		2852A5EA1B66EFA60098459B /* MemoUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemoUploadViewController.xib; sourceTree = "<group>"; };
+		2852A5F21B66EFC00098459B /* MessageUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageUploadViewController.h; sourceTree = "<group>"; };
+		2852A5F31B66EFC00098459B /* MessageUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageUploadViewController.m; sourceTree = "<group>"; };
+		2852A5F41B66EFC00098459B /* MessageUploadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageUploadViewController.xib; sourceTree = "<group>"; };
+		28557C0D1B4DBC5A0046E1C1 /* BoardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardTableViewController.h; sourceTree = "<group>"; };
+		28557C0E1B4DBC5A0046E1C1 /* BoardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardTableViewController.m; sourceTree = "<group>"; };
+		28557C101B4DBC6F0046E1C1 /* ChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewController.h; sourceTree = "<group>"; };
+		28557C111B4DBC6F0046E1C1 /* ChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewController.m; sourceTree = "<group>"; };
+		285606AE1B67773B00BDF523 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		285606B01B67774400BDF523 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		285606B21B6779E200BDF523 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		286E8AAC1B4C070D008C0E01 /* AppConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		286E8AAD1B4C070D008C0E01 /* AppConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstants.m; sourceTree = "<group>"; };
+		287B74041B630875000B9F00 /* YelpAddSpotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpAddSpotViewController.h; sourceTree = "<group>"; };
+		287B74051B630875000B9F00 /* YelpAddSpotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpAddSpotViewController.m; sourceTree = "<group>"; };
+		287B74061B630875000B9F00 /* YelpAddSpotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YelpAddSpotViewController.xib; sourceTree = "<group>"; };
+		2883798E1B3826C20064C6B0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		2883798F1B3826C20064C6B0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		288379911B3829E30064C6B0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		288379921B3829E30064C6B0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		288379931B3829E30064C6B0 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		288379961B382EE50064C6B0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		288379981B382EED0064C6B0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		28860B431B433934009B7F88 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		28860B461B433AE4009B7F88 /* YLBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLBusiness.h; sourceTree = "<group>"; };
+		28860B471B433AE4009B7F88 /* YLBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLBusiness.m; sourceTree = "<group>"; };
+		28860B481B433AE4009B7F88 /* YLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLClient.h; sourceTree = "<group>"; };
+		28860B491B433AE4009B7F88 /* YLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLClient.m; sourceTree = "<group>"; };
+		28860B4A1B433AE4009B7F88 /* YLLocalSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocalSearch.h; sourceTree = "<group>"; };
+		28860B4B1B433AE4009B7F88 /* YLLocalSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocalSearch.m; sourceTree = "<group>"; };
+		28860B4C1B433AE4009B7F88 /* YLLocalSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLLocalSearchResponse.h; sourceTree = "<group>"; };
+		28860B4D1B433AE4009B7F88 /* YLLocalSearchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLLocalSearchResponse.m; sourceTree = "<group>"; };
+		28860B521B433B0E009B7F88 /* YelpKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = YelpKeys.plist; sourceTree = "<group>"; };
+		28B9128B1B697AD800621D5A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		528F5C9C2A89437E51784123 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7AF21F9CF9FD5F30DEDFFD9F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		280427BE1B00950A008ED938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28B9128C1B697AD800621D5A /* Social.framework in Frameworks */,
+				285606B31B6779E200BDF523 /* MobileCoreServices.framework in Frameworks */,
+				285606B11B67774400BDF523 /* MediaPlayer.framework in Frameworks */,
+				285606AF1B67773B00BDF523 /* CoreMedia.framework in Frameworks */,
+				284945F61B3C2158006DF5F4 /* TwitterCore.framework in Frameworks */,
+				284945F41B3C2158006DF5F4 /* TwitterKit.framework in Frameworks */,
+				288379991B382EED0064C6B0 /* CoreLocation.framework in Frameworks */,
+				288379971B382EE50064C6B0 /* MapKit.framework in Frameworks */,
+				284945F31B3C2158006DF5F4 /* Fabric.framework in Frameworks */,
+				6B7AA958812685AC9083AD45 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280427DA1B00950A008ED938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28038FB21B6813E000782290 /* PresentationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				28038FB31B68141300782290 /* VideoPresentationViewController.h */,
+				28038FB41B68141300782290 /* VideoPresentationViewController.m */,
+				28038FB51B68141300782290 /* VideoPresentationViewController.xib */,
+				28038FB81B68142800782290 /* MemoPresentationViewController.h */,
+				28038FB91B68142800782290 /* MemoPresentationViewController.m */,
+				28038FBA1B68142800782290 /* MemoPresentationViewController.xib */,
+				28038FBD1B68143E00782290 /* MessagePresentationViewController.h */,
+				28038FBE1B68143E00782290 /* MessagePresentationViewController.m */,
+				28038FBF1B68143E00782290 /* MessagePresentationViewController.xib */,
+			);
+			name = PresentationViewController;
+			sourceTree = "<group>";
+		};
+		280427B81B00950A008ED938 = {
+			isa = PBXGroup;
+			children = (
+				28860B431B433934009B7F88 /* Podfile */,
+				284945EF1B3C2158006DF5F4 /* Fabric.framework */,
+				284945F01B3C2158006DF5F4 /* TwitterKit.framework */,
+				284945F11B3C2158006DF5F4 /* TwitterKitResources.bundle */,
+				284945F21B3C2158006DF5F4 /* TwitterCore.framework */,
+				288379981B382EED0064C6B0 /* CoreLocation.framework */,
+				288379961B382EE50064C6B0 /* MapKit.framework */,
+				280427C31B00950A008ED938 /* SpotSome */,
+				280427E01B00950A008ED938 /* SpotSomeTests */,
+				280427C21B00950A008ED938 /* Products */,
+				7DBB3DC628E51FE48A202364 /* Pods */,
+				3321EBF4130DDF85C667D696 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		280427C21B00950A008ED938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				280427C11B00950A008ED938 /* SpotSome.app */,
+				280427DD1B00950A008ED938 /* SpotSomeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		280427C31B00950A008ED938 /* SpotSome */ = {
+			isa = PBXGroup;
+			children = (
+				2850F0301B66301C00FADB7C /* AnnotationView */,
+				284EA1481B4D172B0017D417 /* Model */,
+				286E8AAB1B4BFC56008C0E01 /* Controller */,
+				28860B451B433AD1009B7F88 /* yelp-ios-api-v2 */,
+				28860AFF1B432DEC009B7F88 /* Utilities */,
+				28860B001B432E18009B7F88 /* Login */,
+				28860B011B432E1F009B7F88 /* MainViewController */,
+				280427C41B00950A008ED938 /* Supporting Files */,
+			);
+			path = SpotSome;
+			sourceTree = "<group>";
+		};
+		280427C41B00950A008ED938 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				280427C51B00950A008ED938 /* Info.plist */,
+				280427C61B00950A008ED938 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		280427E01B00950A008ED938 /* SpotSomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				280427E31B00950A008ED938 /* SpotSomeTests.m */,
+				280427E11B00950A008ED938 /* Supporting Files */,
+			);
+			path = SpotSomeTests;
+			sourceTree = "<group>";
+		};
+		280427E11B00950A008ED938 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				280427E21B00950A008ED938 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		284EA1481B4D172B0017D417 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				284EA14C1B4D17420017D417 /* SSpot.h */,
+				284EA14D1B4D17420017D417 /* SSpot.m */,
+				284EA1491B4D17410017D417 /* SLocation.h */,
+				284EA14A1B4D17410017D417 /* SLocation.m */,
+				284EA14F1B4D1FF90017D417 /* HybridSpot.h */,
+				284EA1501B4D1FF90017D417 /* HybridSpot.m */,
+				2852A5D71B66DF670098459B /* SBoard.h */,
+				2852A5D81B66DF670098459B /* SBoard.m */,
+				2852A5DA1B66DF710098459B /* SChat.h */,
+				2852A5DB1B66DF710098459B /* SChat.m */,
+				28038FAF1B680A5B00782290 /* SMedia.h */,
+				28038FB01B680A5B00782290 /* SMedia.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		284EA1571B4D2F5E0017D417 /* SpecificCells */ = {
+			isa = PBXGroup;
+			children = (
+				284EA1581B4D2F870017D417 /* YelpAddressTableViewCell.h */,
+				284EA1591B4D2F870017D417 /* YelpAddressTableViewCell.m */,
+				284EA15A1B4D2F870017D417 /* YelpAddressTableViewCell.xib */,
+				284EA15D1B4D32EB0017D417 /* YelpIdTableViewCell.h */,
+				284EA15E1B4D32EB0017D417 /* YelpIdTableViewCell.m */,
+				284EA15F1B4D32EB0017D417 /* YelpIdTableViewCell.xib */,
+				284EA1621B4D33480017D417 /* PushTableViewCell.h */,
+				284EA1631B4D33480017D417 /* PushTableViewCell.m */,
+				284EA1641B4D33480017D417 /* PushTableViewCell.xib */,
+				28524C691B640E570093BE9E /* BoardItemTableViewCell.h */,
+				28524C6A1B640E570093BE9E /* BoardItemTableViewCell.m */,
+				28524C6B1B640E570093BE9E /* BoardItemTableViewCell.xib */,
+				284F79761B6917310083FE75 /* ChatItemTableViewCell.h */,
+				284F79771B6917310083FE75 /* ChatItemTableViewCell.m */,
+				284F79781B6917310083FE75 /* ChatItemTableViewCell.xib */,
+			);
+			name = SpecificCells;
+			sourceTree = "<group>";
+		};
+		284F79701B68ED4A0083FE75 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				284F79711B68ED7C0083FE75 /* MessagesViewController.h */,
+				284F79721B68ED7C0083FE75 /* MessagesViewController.m */,
+				284F79731B68ED7C0083FE75 /* MessagesViewController.xib */,
+			);
+			name = ChatViewController;
+			sourceTree = "<group>";
+		};
+		2850F0301B66301C00FADB7C /* AnnotationView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AnnotationView;
+			sourceTree = "<group>";
+		};
+		2852A5E21B66EF7E0098459B /* UploadViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2852A5E31B66EF950098459B /* VideoUploadViewController.h */,
+				2852A5E41B66EF950098459B /* VideoUploadViewController.m */,
+				2852A5E51B66EF950098459B /* VideoUploadViewController.xib */,
+				2852A5E81B66EFA60098459B /* MemoUploadViewController.h */,
+				2852A5E91B66EFA60098459B /* MemoUploadViewController.m */,
+				2852A5EA1B66EFA60098459B /* MemoUploadViewController.xib */,
+				2852A5F21B66EFC00098459B /* MessageUploadViewController.h */,
+				2852A5F31B66EFC00098459B /* MessageUploadViewController.m */,
+				2852A5F41B66EFC00098459B /* MessageUploadViewController.xib */,
+			);
+			name = UploadViewController;
+			sourceTree = "<group>";
+		};
+		286E8AAB1B4BFC56008C0E01 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				287B74031B630851000B9F00 /* ViewController */,
+				287B74021B63083D000B9F00 /* TableViewController */,
+				284EA1571B4D2F5E0017D417 /* SpecificCells */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		287B74021B63083D000B9F00 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				284746551B4B472D00300F58 /* YelpTableViewController.h */,
+				284746561B4B472D00300F58 /* YelpTableViewController.m */,
+				284EA1521B4D2B3D0017D417 /* SpotsomeSpotMainViewController.h */,
+				284EA1531B4D2B3D0017D417 /* SpotsomeSpotMainViewController.m */,
+				28557C0D1B4DBC5A0046E1C1 /* BoardTableViewController.h */,
+				28557C0E1B4DBC5A0046E1C1 /* BoardTableViewController.m */,
+				28557C101B4DBC6F0046E1C1 /* ChatTableViewController.h */,
+				28557C111B4DBC6F0046E1C1 /* ChatTableViewController.m */,
+			);
+			name = TableViewController;
+			sourceTree = "<group>";
+		};
+		287B74031B630851000B9F00 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				284F79701B68ED4A0083FE75 /* ChatViewController */,
+				28038FB21B6813E000782290 /* PresentationViewController */,
+				2852A5E21B66EF7E0098459B /* UploadViewController */,
+				287B74041B630875000B9F00 /* YelpAddSpotViewController.h */,
+				287B74051B630875000B9F00 /* YelpAddSpotViewController.m */,
+				287B74061B630875000B9F00 /* YelpAddSpotViewController.xib */,
+				2852A5DD1B66E9370098459B /* UploadViewController.h */,
+				2852A5DE1B66E9370098459B /* UploadViewController.m */,
+				2852A5DF1B66E9370098459B /* UploadViewController.xib */,
+				284F797B1B6919600083FE75 /* AddNewChatViewController.h */,
+				284F797C1B6919600083FE75 /* AddNewChatViewController.m */,
+				284F797D1B6919600083FE75 /* AddNewChatViewController.xib */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		28860AFF1B432DEC009B7F88 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				28860B521B433B0E009B7F88 /* YelpKeys.plist */,
+				280427C81B00950A008ED938 /* AppDelegate.h */,
+				280427C91B00950A008ED938 /* AppDelegate.m */,
+				280427D11B00950A008ED938 /* Main.storyboard */,
+				280427D41B00950A008ED938 /* Images.xcassets */,
+				280427D61B00950A008ED938 /* LaunchScreen.xib */,
+				280427CB1B00950A008ED938 /* SpotSome.xcdatamodeld */,
+				286E8AAC1B4C070D008C0E01 /* AppConstants.h */,
+				286E8AAD1B4C070D008C0E01 /* AppConstants.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		28860B001B432E18009B7F88 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2883798E1B3826C20064C6B0 /* LoginViewController.h */,
+				2883798F1B3826C20064C6B0 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		28860B011B432E1F009B7F88 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				288379911B3829E30064C6B0 /* MainViewController.h */,
+				288379921B3829E30064C6B0 /* MainViewController.m */,
+				288379931B3829E30064C6B0 /* MainViewController.xib */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		28860B451B433AD1009B7F88 /* yelp-ios-api-v2 */ = {
+			isa = PBXGroup;
+			children = (
+				28860B461B433AE4009B7F88 /* YLBusiness.h */,
+				28860B471B433AE4009B7F88 /* YLBusiness.m */,
+				28860B481B433AE4009B7F88 /* YLClient.h */,
+				28860B491B433AE4009B7F88 /* YLClient.m */,
+				28860B4A1B433AE4009B7F88 /* YLLocalSearch.h */,
+				28860B4B1B433AE4009B7F88 /* YLLocalSearch.m */,
+				28860B4C1B433AE4009B7F88 /* YLLocalSearchResponse.h */,
+				28860B4D1B433AE4009B7F88 /* YLLocalSearchResponse.m */,
+			);
+			name = "yelp-ios-api-v2";
+			sourceTree = "<group>";
+		};
+		3321EBF4130DDF85C667D696 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28B9128B1B697AD800621D5A /* Social.framework */,
+				285606B21B6779E200BDF523 /* MobileCoreServices.framework */,
+				285606B01B67774400BDF523 /* MediaPlayer.framework */,
+				285606AE1B67773B00BDF523 /* CoreMedia.framework */,
+				7AF21F9CF9FD5F30DEDFFD9F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DBB3DC628E51FE48A202364 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				528F5C9C2A89437E51784123 /* Pods.debug.xcconfig */,
+				002E6A78BD2B2170D369EA26 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		280427C01B00950A008ED938 /* SpotSome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280427E71B00950A008ED938 /* Build configuration list for PBXNativeTarget "SpotSome" */;
+			buildPhases = (
+				A98DFB3B499097AADEEF70E3 /* Check Pods Manifest.lock */,
+				280427BD1B00950A008ED938 /* Sources */,
+				280427BE1B00950A008ED938 /* Frameworks */,
+				280427BF1B00950A008ED938 /* Resources */,
+				284945EE1B3C20E8006DF5F4 /* ShellScript */,
+				CC6B5DA2E13E50179DA8C39B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotSome;
+			productName = SpotSome;
+			productReference = 280427C11B00950A008ED938 /* SpotSome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		280427DC1B00950A008ED938 /* SpotSomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280427EA1B00950A008ED938 /* Build configuration list for PBXNativeTarget "SpotSomeTests" */;
+			buildPhases = (
+				280427D91B00950A008ED938 /* Sources */,
+				280427DA1B00950A008ED938 /* Frameworks */,
+				280427DB1B00950A008ED938 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280427DF1B00950A008ED938 /* PBXTargetDependency */,
+			);
+			name = SpotSomeTests;
+			productName = SpotSomeTests;
+			productReference = 280427DD1B00950A008ED938 /* SpotSomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		280427B91B00950A008ED938 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "SpotSome@Beuth";
+				TargetAttributes = {
+					280427C01B00950A008ED938 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 9E5M8J88K8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					280427DC1B00950A008ED938 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 280427C01B00950A008ED938;
+					};
+				};
+			};
+			buildConfigurationList = 280427BC1B00950A008ED938 /* Build configuration list for PBXProject "SpotSome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 280427B81B00950A008ED938;
+			productRefGroup = 280427C21B00950A008ED938 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				280427C01B00950A008ED938 /* SpotSome */,
+				280427DC1B00950A008ED938 /* SpotSomeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		280427BF1B00950A008ED938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2852A5EC1B66EFA60098459B /* MemoUploadViewController.xib in Resources */,
+				28860B441B433934009B7F88 /* Podfile in Resources */,
+				28038FBC1B68142800782290 /* MemoPresentationViewController.xib in Resources */,
+				284F797F1B6919600083FE75 /* AddNewChatViewController.xib in Resources */,
+				284EA1661B4D33480017D417 /* PushTableViewCell.xib in Resources */,
+				287B74081B630875000B9F00 /* YelpAddSpotViewController.xib in Resources */,
+				28038FB71B68141300782290 /* VideoPresentationViewController.xib in Resources */,
+				284F79751B68ED7C0083FE75 /* MessagesViewController.xib in Resources */,
+				280427D31B00950A008ED938 /* Main.storyboard in Resources */,
+				28860B531B433B0E009B7F88 /* YelpKeys.plist in Resources */,
+				2852A5E11B66E9370098459B /* UploadViewController.xib in Resources */,
+				28524C6D1B640E570093BE9E /* BoardItemTableViewCell.xib in Resources */,
+				284F797A1B6917310083FE75 /* ChatItemTableViewCell.xib in Resources */,
+				2852A5F61B66EFC00098459B /* MessageUploadViewController.xib in Resources */,
+				280427D81B00950A008ED938 /* LaunchScreen.xib in Resources */,
+				280427D51B00950A008ED938 /* Images.xcassets in Resources */,
+				2852A5E71B66EF950098459B /* VideoUploadViewController.xib in Resources */,
+				284EA15C1B4D2F870017D417 /* YelpAddressTableViewCell.xib in Resources */,
+				284EA1611B4D32EB0017D417 /* YelpIdTableViewCell.xib in Resources */,
+				288379951B3829E30064C6B0 /* MainViewController.xib in Resources */,
+				28038FC11B68143E00782290 /* MessagePresentationViewController.xib in Resources */,
+				284945F51B3C2158006DF5F4 /* TwitterKitResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280427DB1B00950A008ED938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		284945EE1B3C20E8006DF5F4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run f27aa22a556524fceba3f0171806d0369d136600 8346270bb0529ae08173b56f5374918915613b065a6b3ca6bcb1de16e7a602fc";
+		};
+		A98DFB3B499097AADEEF70E3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC6B5DA2E13E50179DA8C39B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		280427BD1B00950A008ED938 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284F797E1B6919600083FE75 /* AddNewChatViewController.m in Sources */,
+				28038FB61B68141300782290 /* VideoPresentationViewController.m in Sources */,
+				28860B501B433AE4009B7F88 /* YLLocalSearch.m in Sources */,
+				28524C6C1B640E570093BE9E /* BoardItemTableViewCell.m in Sources */,
+				286E8AAE1B4C070D008C0E01 /* AppConstants.m in Sources */,
+				28860B511B433AE4009B7F88 /* YLLocalSearchResponse.m in Sources */,
+				284EA1651B4D33480017D417 /* PushTableViewCell.m in Sources */,
+				287B74071B630875000B9F00 /* YelpAddSpotViewController.m in Sources */,
+				28557C0F1B4DBC5A0046E1C1 /* BoardTableViewController.m in Sources */,
+				28038FB11B680A5B00782290 /* SMedia.m in Sources */,
+				284746571B4B472D00300F58 /* YelpTableViewController.m in Sources */,
+				2852A5E01B66E9370098459B /* UploadViewController.m in Sources */,
+				2852A5EB1B66EFA60098459B /* MemoUploadViewController.m in Sources */,
+				280427CA1B00950A008ED938 /* AppDelegate.m in Sources */,
+				284EA1601B4D32EB0017D417 /* YelpIdTableViewCell.m in Sources */,
+				284F79791B6917310083FE75 /* ChatItemTableViewCell.m in Sources */,
+				28038FC01B68143E00782290 /* MessagePresentationViewController.m in Sources */,
+				2852A5D91B66DF670098459B /* SBoard.m in Sources */,
+				284EA1511B4D1FF90017D417 /* HybridSpot.m in Sources */,
+				284F79741B68ED7C0083FE75 /* MessagesViewController.m in Sources */,
+				288379941B3829E30064C6B0 /* MainViewController.m in Sources */,
+				284EA14E1B4D17420017D417 /* SSpot.m in Sources */,
+				28557C121B4DBC6F0046E1C1 /* ChatTableViewController.m in Sources */,
+				284EA15B1B4D2F870017D417 /* YelpAddressTableViewCell.m in Sources */,
+				2852A5E61B66EF950098459B /* VideoUploadViewController.m in Sources */,
+				28860B4F1B433AE4009B7F88 /* YLClient.m in Sources */,
+				2852A5F51B66EFC00098459B /* MessageUploadViewController.m in Sources */,
+				284EA1551B4D2B3D0017D417 /* SpotsomeSpotMainViewController.m in Sources */,
+				28860B4E1B433AE4009B7F88 /* YLBusiness.m in Sources */,
+				280427C71B00950A008ED938 /* main.m in Sources */,
+				280427CD1B00950A008ED938 /* SpotSome.xcdatamodeld in Sources */,
+				2852A5DC1B66DF710098459B /* SChat.m in Sources */,
+				284EA14B1B4D17410017D417 /* SLocation.m in Sources */,
+				288379901B3826C20064C6B0 /* LoginViewController.m in Sources */,
+				28038FBB1B68142800782290 /* MemoPresentationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280427D91B00950A008ED938 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280427E41B00950A008ED938 /* SpotSomeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280427DF1B00950A008ED938 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280427C01B00950A008ED938 /* SpotSome */;
+			targetProxy = 280427DE1B00950A008ED938 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		280427D11B00950A008ED938 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				280427D21B00950A008ED938 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		280427D61B00950A008ED938 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				280427D71B00950A008ED938 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		280427E51B00950A008ED938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		280427E61B00950A008ED938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		280427E81B00950A008ED938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528F5C9C2A89437E51784123 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SpotSome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		280427E91B00950A008ED938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 002E6A78BD2B2170D369EA26 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = SpotSome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		280427EB1B00950A008ED938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SpotSomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotSome.app/SpotSome";
+			};
+			name = Debug;
+		};
+		280427EC1B00950A008ED938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SpotSomeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotSome.app/SpotSome";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		280427BC1B00950A008ED938 /* Build configuration list for PBXProject "SpotSome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280427E51B00950A008ED938 /* Debug */,
+				280427E61B00950A008ED938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280427E71B00950A008ED938 /* Build configuration list for PBXNativeTarget "SpotSome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280427E81B00950A008ED938 /* Debug */,
+				280427E91B00950A008ED938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280427EA1B00950A008ED938 /* Build configuration list for PBXNativeTarget "SpotSomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280427EB1B00950A008ED938 /* Debug */,
+				280427EC1B00950A008ED938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		280427CB1B00950A008ED938 /* SpotSome.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				280427CC1B00950A008ED938 /* SpotSome.xcdatamodel */,
+			);
+			currentVersion = 280427CC1B00950A008ED938 /* SpotSome.xcdatamodel */;
+			path = SpotSome.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 280427B91B00950A008ED938 /* Project object */;
+}

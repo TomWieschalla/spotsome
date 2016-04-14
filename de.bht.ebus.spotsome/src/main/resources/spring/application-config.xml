@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa" 
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd 
+		http://www.springframework.org/schema/data/jpa
+    	http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+    	http://www.springframework.org/schema/jdbc
+    	http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd
+    	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd">
+
+	<context:component-scan base-package="de.bht.ebus.spotsome" />
+
+	<context:property-placeholder location="classpath:config/application.properties" />
+
+	<jpa:repositories base-package="de.bht.ebus.spotsome.repositories" />
+
+	<!-- Look up the container deployed EntityManager -->
+	<jee:jndi-lookup jndi-name="java:jboss/EntityManagerFactory"
+		id="entityManagerFactory" expected-type="javax.persistence.EntityManagerFactory" />
+	<jee:jndi-lookup jndi-name="java:jboss/datasources/ExampleDS"
+		id="dataSource" />
+
+	<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager" />
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="${media.max_upload_file_size_in_bytes}" />
+		<property name="maxInMemorySize" value="${media.max_file_size_in_memory_in_bytes}" />
+	</bean>
+	
+	<bean id="standardYaml" class="org.yaml.snakeyaml.Yaml" scope="prototype" />
+	
+	<bean id="tika" class="org.apache.tika.Tika" />
+	
+	<bean id="mimeTypes" class="org.apache.tika.mime.MimeTypes" factory-method="getDefaultMimeTypes"/>
+	
+	<bean id="currentCalculateDistanceStrategy" class="de.bht.ebus.spotsome.util.SphericalLawOfCosines" />
+
+	<bean id="localValidatorFactoryBean" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
+</beans>

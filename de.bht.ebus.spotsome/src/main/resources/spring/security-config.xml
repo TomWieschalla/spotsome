@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd">
+
+	<http pattern="/account/**" create-session="stateless">
+		<intercept-url pattern="/**" access="hasRole('REMOTE')" />
+		<http-basic />
+		<csrf disabled="true" />
+	</http>
+
+	<http create-session="stateless" entry-point-ref="restAuthenticationEntryPoint">
+		<intercept-url pattern="/**" access="hasRole('USER')" />
+		<csrf disabled="true" />
+		<custom-filter ref="accessTokenAuthenticationFilter"
+			position="PRE_AUTH_FILTER" />
+	</http>
+
+	<beans:bean id="accessTokenAuthenticationFilter"
+		class="de.bht.ebus.spotsome.security.AccessTokenAuthenticationFilter">
+		<beans:constructor-arg ref="accessTokenAuthenticationProvider" />
+		<beans:constructor-arg ref="restAuthenticationEntryPoint" />
+	</beans:bean>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="remote-x4D9Tu" password="cX1TdaFKR9" authorities="ROLE_REMOTE" />
+			</user-service>
+		</authentication-provider>
+		<authentication-provider ref="accessTokenAuthenticationProvider" />
+	</authentication-manager>
+
+	<beans:bean id="accessTokenAuthenticationProvider"
+		class="de.bht.ebus.spotsome.security.AccessTokenAuthenticationProvider" />
+
+	<beans:bean id="restAuthenticationEntryPoint"
+		class="de.bht.ebus.spotsome.security.RestAuthenticationEntryPoint" />
+
+</beans:beans>

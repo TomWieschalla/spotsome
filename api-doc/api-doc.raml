@@ -1,0 +1,380 @@
+#%RAML 0.8
+title: SpotSome
+version: 1.3
+baseUri: http://134.255.239.58:8888/spotsome
+/account:
+    /register:
+        post:
+            description: Register new user account
+            headers:
+                X-Verify-Credentials-Authorization:
+                    description: OAuth2 response
+                    required: true
+                    type: string
+                    example: |
+                        OAuth oauth_consumer_key="CXrYudEq9KO5ApeTn4e0OgJ2q",
+                        oauth_nonce="0ee43a2b2f4b9ca3253c702e00dd1e8a",
+                        oauth_signature="nC%2FiSmINLFmVxyHLh16kBa4RiVk%3D",
+                        oauth_signature_method="HMAC-SHA1",
+                        oauth_timestamp="1436383926",
+                        oauth_token="3345298533-Ce4bN8XU75WrxMSDxGtVze3p7Z8vPoskCL9eZVo",
+                        oauth_version="1.0"
+                Authorization:
+                    description: Basic Authentication credentials
+                    required: true
+                    type: string
+                    example: Basic d2lraTpwZWRpYQ==
+            responses:
+                201:
+                    body:
+                        application/json:
+                            example: !include json/token-res.json
+                401:
+                    description: Credentials not valid
+                    body:
+                        application/json:
+                            example: !include json/err-msg.json
+                409:
+                    description: User already exists
+                    body:
+                        application/json:
+                            example: !include json/err-msg.json
+    /access_token:
+        get:
+            description: Get access token for already registered user
+            headers:
+                X-Verify-Credentials-Authorization:
+                    description: OAuth2 response
+                    required: true
+                    type: string
+                    example: |
+                        OAuth oauth_consumer_key="CXrYudEq9KO5ApeTn4e0OgJ2q",
+                        oauth_nonce="0ee43a2b2f4b9ca3253c702e00dd1e8a",
+                        oauth_signature="nC%2FiSmINLFmVxyHLh16kBa4RiVk%3D",
+                        oauth_signature_method="HMAC-SHA1",
+                        oauth_timestamp="1436383926",
+                        oauth_token="3345298533-Ce4bN8XU75WrxMSDxGtVze3p7Z8vPoskCL9eZVo",
+                        oauth_version="1.0"
+            responses:
+                200:
+                    body:
+                        application/json:
+                            example: !include json/token-res.json
+                401:
+                    description: OAuth2 credentials not valid
+                    body:
+                        application/json:
+                            example: !include json/err-msg.json
+                404:
+                    body:
+                        application/json:
+                            example: !include json/err-msg.json
+    /test:
+        get:
+            description: Check if controller is accessible.
+            headers:
+                X-Access-Token:
+                    description: Spotsome API Access Token
+                    type: string
+                    required: true
+            responses:
+                200:
+                    body:
+                        text/plain:
+                            example: Controller accessible.
+/media/upload:
+    post:
+        description: Upload new media file.
+        headers:
+            X-Access-Token:
+                description: Spotsome API Access Token
+                type: string
+                required: true
+        body:
+            multipart/form-data:
+                formParameters:
+                    media:
+                        required: true
+                        type: file
+        responses:
+            200:
+                body:
+                    application/json:
+                        example: !include json/upload-media-res.json
+            409:
+                description: Unsupported media/mime type
+                body:
+                    application/json:
+                        example: !include json/err-msg.json
+    /supported_mime_type:
+        get:
+            description: Retrieve a collection of supported MIME-types.
+            headers:
+                X-Access-Token:
+                    description: Spotsome API Access Token
+                    type: string
+                    required: true
+            responses:
+                200:
+                    body:
+                        application/json:
+                            example: !include json/mime-types-res.json
+    /test:
+        get:
+            description: Check if controller is accessible.
+            headers:
+                X-Access-Token:
+                    description: Spotsome API Access Token
+                    type: string
+                    required: true
+            responses:
+                200:
+                    body:
+                        text/plain:
+                            example: Controller accessible.
+/spot:
+    get:
+        description: |
+           Retrieve only spots in range
+        headers:
+            X-Access-Token:
+                description: Spotsome API Access Token
+                type: string
+                required: true
+        queryParameters:
+            latitude:
+                description: Latitude in signed decimal degrees
+                type: number
+                minimum: -90.0
+                maximum: 90.0
+                required: true
+                example: 53.1697267
+            longitude:
+                description: Longitude in signed decimal degrees
+                type: number
+                minimum: -180.0
+                maximum: 180.0
+                required: true
+                example: 7.3125
+        responses:
+            200:
+                body:
+                    application/json:
+                        example: !include json/get-spot-res.json
+    post:
+        description: Create new spot.
+        headers:
+            X-Access-Token:
+                description: Spotsome API Access Token
+                type: string
+                required: true
+        body:
+            application/json:
+                example: !include json/spot-post-dto.json
+        responses:
+            201:
+                body:
+                    application/json:
+                        example: !include json/spot-post-res.json
+    /{id}:
+            uriParameters:
+                id:
+                    description: Spot ID
+                    type: integer
+            get:
+                description: Retrieve spot with specified id
+                headers:
+                    X-Access-Token:
+                        description: Spotsome API Access Token
+                        type: string
+                        required: true
+                responses:
+                    200:
+                        body:
+                            application/json:
+                                example: !include json/get-one-spot.json
+            delete:
+                description: Delete spot with specified id
+                headers:
+                    X-Access-Token:
+                        description: Spotsome API Access Token
+                        type: string
+                        required: true
+                responses:
+                    204:
+                    404:
+
+    /test:
+        get:
+            description: Check if controller is accessible.
+            headers:
+                X-Access-Token:
+                    description: Spotsome API Access Token
+                    type: string
+                    required: true
+            responses:
+                200:
+                    body:
+                        text/plain:
+                            example: Controller accessible.
+/bulletin_board:
+    get:
+        description: Get all bulletin boards by spot_id.
+        headers:
+            X-Access-Token:
+                description: Spotsome API Access Token
+                type: string
+                required: true
+        queryParameters:
+            spot_id:
+                description: spot_id
+                type: integer
+                required: true
+    post:
+        description: Create new bulletin board.
+        headers:
+            X-Access-Token:
+                description: Spotsome API Access Token
+                type: string
+                required: true
+        body:
+            application/json:
+                example: !include json/bulletin-board-post-dto.json
+        responses:
+            201:
+                body:
+                    application/json:
+                        example: !include json/bulletin-board-post-res.json
+    /{id}:
+        uriParameters:
+            id:
+                description: bulletin_board_id
+                type: integer
+        get:
+            description: Get bulletin board by bulletin_board_id.
+            headers:
+                X-Access-Token:
+                    description: Spotsome API Access Token
+                    type: string
+                    required: true
+            responses:
+                200:
+                    body:
+                        application/json:
+                            example:
+                404:
+        /message:
+            get:
+                description: Get all messages posted on this bulletin board.
+                headers:
+                    X-Access-Token:
+                        description: Spotsome API Access Token
+                        type: string
+                        required: true
+                responses:
+                    200:
+            post:
+                description: Add new message to bulletin board.
+                headers:
+                    X-Access-Token:
+                        description: Spotsome API Access Token
+                        type: string
+                        required: true
+                body:
+                    application/json:
+                        example: !include json/message-post-dto.json
+    /test:
+        get:
+            description: Check if controller is accessible.
+            headers:
+                X-Access-Token:
+                    description: Spotsome API Access Token
+                    type: string
+                    required: true
+            responses:
+                200:
+                    body:
+                        text/plain:
+                            example: Controller accessible.
+/chat:
+    get:
+        description: Get all chats by spot_id.
+        headers:
+            X-Access-Token:
+                description: Spotsome API Access Token
+                type: string
+                required: true
+        queryParameters:
+            spot_id:
+                description: spot_id
+                type: integer
+                required: true
+        responses:
+            200:
+    post:
+        description: Create new chat.
+        headers:
+            X-Access-Token:
+                description: Spotsome API Access Token
+                type: string
+                required: true
+        body:
+            application/json:
+                example: !include json/message-post-dto.json
+        responses:
+            201:
+    /{id}:
+        uriParameters:
+            id:
+                description: chat_id
+                type: integer
+        get:
+            description: Get chat by chat_id
+            headers:
+                X-Access-Token:
+                    description: Spotsome API Access Token
+                    type: string
+                    required: true
+            responses:
+                200:
+                    body:
+                        application/json:
+                            example:
+                404:
+        /message:
+            get: 
+                description: Get all message from this chat since timestamp
+                headers:
+                    X-Access-Token:
+                        description: Spotsome API Access Token
+                        type: string
+                        required: true
+                queryParameters:
+                    since:
+                        description: timestamp in millieseconds
+                        type: integer
+                        required: false
+                responses:
+                    200:
+                    404:
+
+            post:
+                description: Add new message to chat.
+                headers:
+                    X-Access-Token:
+                        description: Spotsome API Access Token
+                        type: string
+                        required: true
+                body:
+                    application/json:
+                        example: !include json/message-post-dto.json
+                responses:
+                    201:
+        /poll/message:
+            get:
+                description: Get new message (Timeout 2 minutes)
+                headers:
+                    X-Access-Token:
+                        description: Spotsome API Access Token
+                        type: string
+                        required: true

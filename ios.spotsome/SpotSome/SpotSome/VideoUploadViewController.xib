@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoUploadViewController">
+            <connections>
+                <outlet property="descriptionTextField" destination="sP9-eF-BPC" id="eZx-c6-QWc"/>
+                <outlet property="imageView" destination="Ln5-UK-oEw" id="HIt-iA-y7F"/>
+                <outlet property="makeButton" destination="F29-pd-hUm" id="aKy-pT-uun"/>
+                <outlet property="takeButton" destination="pMc-V7-78X" id="qi3-qG-6GU"/>
+                <outlet property="uploadButton" destination="KYa-Ap-MYf" id="ObC-J2-zgs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="movie_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Ln5-UK-oEw">
+                    <rect key="frame" x="0.0" y="65" width="320" height="310"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYa-Ap-MYf" userLabel="upload">
+                    <rect key="frame" x="8" y="515" width="304" height="40"/>
+                    <color key="backgroundColor" red="0.16862745100000001" green="0.51764705879999995" blue="0.82352941180000006" alpha="0.25" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Upload">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="uploadToBoard:" destination="-1" eventType="touchUpInside" id="0CT-xc-A14"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Beschreibung" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sP9-eF-BPC">
+                    <rect key="frame" x="8" y="397" width="304" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F29-pd-hUm" userLabel="make">
+                    <rect key="frame" x="8" y="457" width="150" height="40"/>
+                    <color key="backgroundColor" red="0.16862745100000001" green="0.51764705879999995" blue="0.82352941180000006" alpha="0.25" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Aufnahme">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="createVideo:" destination="-1" eventType="touchUpInside" id="upx-U0-yXi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMc-V7-78X" userLabel="take">
+                    <rect key="frame" x="162" y="457" width="150" height="40"/>
+                    <color key="backgroundColor" red="0.16862745100000001" green="0.51764705879999995" blue="0.82352941180000006" alpha="0.25" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Zur Mediathek">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="getVideo:" destination="-1" eventType="touchUpInside" id="O8o-e9-6kN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="movie_placeholder" width="320" height="310"/>
+    </resources>
+</document>

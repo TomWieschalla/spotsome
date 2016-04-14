@@ -1,0 +1,10 @@
+{
+    "name": "Rock am Ring",
+    "radius": 500,
+    "location": {
+        "latitude": 50.365278,
+        "longitude": 7.3125,
+        "location_id": 1
+    },
+    "spot_id": 1
+}
