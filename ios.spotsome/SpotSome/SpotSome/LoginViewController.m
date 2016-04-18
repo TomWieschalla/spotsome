@@ -130,7 +130,7 @@
     NSError *error = nil;
     NSURLResponse *response = nil;
     
-    TWTROAuthSigning *oauthSigning = [[TWTROAuthSigning alloc] initWithAuthConfig:[Twitter sharedInstance].authConfig authSession:[Twitter sharedInstance].version];
+    TWTROAuthSigning *oauthSigning = [[TWTROAuthSigning alloc] initWithAuthConfig:[Twitter sharedInstance].authConfig authSession:[Twitter sharedInstance].sessionStore.session];
     NSDictionary *authHeaders = [oauthSigning OAuthEchoHeadersToVerifyCredentials];
 
     //sending post request for auth in java backend

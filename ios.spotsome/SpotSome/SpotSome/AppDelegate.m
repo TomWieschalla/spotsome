@@ -54,12 +54,12 @@
 
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
-    self.deviceToken = token;
+    self.token = token;
     NSLog(@"device token: %@",token);
 }
 
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
-    self.deviceToken = @"z278934efhjebrfiunc294ewi";
+    self.token = @"z278934efhjebrfiunc294ewi";
     NSLog(@"Error %@",err);
 }
 

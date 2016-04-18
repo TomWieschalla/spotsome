@@ -19,7 +19,6 @@
 @property (strong, nonatomic) NSString *token;
 @property (strong, nonatomic) NSString *twitterName;
 @property (strong, nonatomic) NSNumber *userID;
-@property (strong, nonatomic) NSString *deviceToken;
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
